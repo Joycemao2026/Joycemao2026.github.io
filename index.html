@@ -169,6 +169,8 @@
     gap: 12px;
   }
   .stat {
+    display: flex;
+    flex-direction: column;
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: 3px;
@@ -183,8 +185,9 @@
     letter-spacing: 0.02em;
   }
   .stat .num small { font-size: 0.55em; letter-spacing: 0.1em; }
-  .stat .num--txt { font-size: clamp(17px, 5vw, 24px); line-height: 1.7; }
-  .stat .lbl { font-size: 12.5px; color: var(--muted); margin-bottom: 8px; line-height: 1.6; }
+  .stat .num--txt { font-size: clamp(17px, 5vw, 24px); line-height: 1.35; padding-bottom: 3px; }
+  /* lbl 撑满剩余空间,让同一行两张卡的数字底部对齐(标签行数不同也不飘) */
+  .stat .lbl { font-size: 12.5px; color: var(--muted); margin-bottom: 8px; line-height: 1.6; flex: 1; }
 
   /* ── 履历时间线 ── */
   .lede { color: var(--muted); max-width: 34em; }
@@ -312,6 +315,21 @@
     margin: 24px 0 14px;
   }
   .contact-box b { color: var(--pink); font-weight: 700; }
+  .mp-row { display: flex; align-items: center; gap: 18px; margin-top: 24px; }
+  .qr { width: 128px; height: 128px; flex: none; border-radius: 3px; }
+  .qr-pending {
+    border: 1px dashed var(--line-strong);
+    color: var(--dim);
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.9;
+  }
+  img.qr { background: #FFFFFF; border: 1px solid var(--line); padding: 7px; }
 
   /* ── 页脚 ── */
   footer { padding: 90px 0 56px; text-align: center; }
@@ -362,7 +380,7 @@
 <section>
   <div class="wrap">
     <p class="eyebrow">01 · DATA</p>
-    <h2>先用几个数字，认识我</h2>
+    <h2>先认识我</h2>
     <div class="stats">
       <div class="stat">
         <div class="lbl">在投资与产业一线，工作了</div>
@@ -495,7 +513,13 @@
     <!-- CONTACT-PLACEHOLDER:联系方式确定后,替换下面整块 -->
     <div class="contact-box">CONTACT / <b>联系方式即将补上</b></div>
 
-    <p class="lede" style="font-size: 14px;">也可以先到公众号 <b>「月牙小姐」</b> 认识我。</p>
+    <!-- 公众号二维码接口:拿到二维码图片后存为 assets/qrcode.jpg,
+         把下面的占位 div 换成:
+         <img class="qr" src="assets/qrcode.jpg" alt="公众号「月牙小姐」二维码" width="128" height="128"> -->
+    <div class="mp-row">
+      <div class="qr qr-pending">公众号二维码<br>待补</div>
+      <p class="lede" style="font-size: 14px; margin: 0;">也可以先到公众号<br><b>「月牙小姐」</b> 认识我。</p>
+    </div>
   </div>
 </section>
 
