@@ -241,21 +241,15 @@
   }
   .topic {
     display: flex;
-    gap: 12px;
-    align-items: baseline;
+    gap: 13px;
+    align-items: center;
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: 3px;
     padding: 13px 16px;
     font-size: 14.5px;
   }
-  .topic i {
-    font-family: var(--mono);
-    font-style: normal;
-    font-size: 12px;
-    color: var(--pink);
-    flex: none;
-  }
+  .topic svg { width: 21px; height: 21px; color: var(--pink); flex: none; }
   .rules {
     border: 1px solid var(--line-strong);
     border-radius: 3px;
@@ -269,8 +263,8 @@
     color: var(--pink);
     margin: 0 0 14px;
   }
-  .rule { display: flex; gap: 14px; align-items: baseline; margin-bottom: 12px; }
-  .rule i { font-family: var(--mono); font-style: normal; font-size: 12px; color: var(--dim); flex: none; }
+  .rule { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 13px; }
+  .rule svg { width: 22px; height: 22px; color: var(--pink); flex: none; margin-top: 3px; }
   .rule em { font-style: normal; color: var(--pink); font-weight: 600; }
 
   /* ── 咨询手记 ── */
@@ -442,19 +436,46 @@
     <p class="lede">一次 1 对 1，只聊一件事：你眼前正在经历的那个问题。帮你把它理清楚一点，少走一点弯路。</p>
 
     <div class="topics">
-      <div class="topic"><i>01</i>创业或副业，方向怎么选</div>
-      <div class="topic"><i>02</i>手里的技能，怎么做成产品</div>
-      <div class="topic"><i>03</i>产品做出来了，用户从哪来</div>
-      <div class="topic"><i>04</i>内容怎么做，才能持续积累</div>
-      <div class="topic"><i>05</i>一人公司，第一步怎么走</div>
-      <div class="topic"><i>06</i>时间、成本和资源，怎么取舍</div>
+      <div class="topic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M15.6 8.4 L13.5 13.5 L8.4 15.6 L10.5 10.5 Z"/></svg>
+        创业或副业，方向怎么选
+      </div>
+      <div class="topic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 L20 7.5 V16.5 L12 21 L4 16.5 V7.5 Z"/><path d="M4 7.5 L12 12 L20 7.5 M12 12 V21"/></svg>
+        手里的技能，怎么做成产品
+      </div>
+      <div class="topic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.7"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg>
+        产品做出来了，用户从哪来
+      </div>
+      <div class="topic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 V16.2 L14.6 5.6 L18.4 9.4 L7.8 20 Z"/><path d="M12.8 7.4 L16.6 11.2"/></svg>
+        内容怎么做，才能持续积累
+      </div>
+      <div class="topic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5.5 20 C5.5 15.8 8.3 13.6 12 13.6 C15.7 13.6 18.5 15.8 18.5 20"/></svg>
+        一人公司，第一步怎么走
+      </div>
+      <div class="topic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7 H20 M4 12 H20 M4 17 H20"/><circle cx="9.5" cy="7" r="1.9" fill="var(--panel)"/><circle cx="15" cy="12" r="1.9" fill="var(--panel)"/><circle cx="7" cy="17" r="1.9" fill="var(--panel)"/></svg>
+        时间、成本和资源，怎么取舍
+      </div>
     </div>
 
     <div class="rules">
       <p class="rt">只有三条规则</p>
-      <div class="rule"><i>01</i><span>不用准备漂亮的 BP，也不用包装自己</span></div>
-      <div class="rule"><i>02</i><span>带一个正在发生的真问题来</span></div>
-      <div class="rule"><i>03</i><span>聊完若觉得有收获，<em>两杯咖啡钱，随喜就好</em></span></div>
+      <div class="rule">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 H14 L17.5 7 V20.5 H6.5 Z"/><path d="M14 3.5 V7 H17.5"/><path d="M4.5 5.5 L19.5 18.5"/></svg>
+        <span>不用准备漂亮的 BP，也不用包装自己</span>
+      </div>
+      <div class="rule">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5 H20 V15.5 H12.5 L8.5 19.5 V15.5 H4 Z"/><path d="M13.5 7.5 L10.8 11.3 H13 L11.2 13.8"/></svg>
+        <span>带一个正在发生的真问题来</span>
+      </div>
+      <div class="rule">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5 H9.5 V13.5 C9.5 15.8 8 17.2 6 17.2 C4 17.2 2.5 15.8 2.5 13.5 Z"/><path d="M9.5 9.8 C11.4 9.8 11.4 13.2 9.5 13.2"/><path d="M13.5 8.5 H20.5 V13.5 C20.5 15.8 19 17.2 17 17.2 C15 17.2 13.5 15.8 13.5 13.5 Z"/><path d="M20.5 9.8 C22.4 9.8 22.4 13.2 20.5 13.2"/></svg>
+        <span>聊完若觉得有收获，<em>两杯咖啡钱，随喜就好</em></span>
+      </div>
     </div>
   </div>
 </section>
