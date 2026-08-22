@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>毛小娟 Joyce</title>
+<meta name="description" content="前线性资本副总裁毛小娟（Joyce）的个人页：给年轻创业者的 1 对 1 轻咨询，把一个真问题聊透。">
+<meta property="og:title" content="毛小娟 Joyce · 轻咨询">
+<meta property="og:description" content="不聊空话，就聊你眼前正在经历的事。给年轻创业者的 1 对 1 轻咨询。">
+<meta property="og:url" content="https://artemislin.github.io/joyce-intro/">
+<meta property="og:image" content="https://artemislin.github.io/joyce-intro/assets/photo.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌙</text></svg>">
+
+<!-- ═══════════════════════════════════════════════════════
+     维护说明(给接手的人):详见仓库里的 README.md
+     · 加新案例:搜「案例卡片模板」,复制注释里的整段,贴到案例列表最上方
+     · 换照片:替换 assets/photo.jpg;圆框取景不对时,微调 .moon img 的 object-position
+     · 填联系方式:搜「CONTACT-PLACEHOLDER」
+     ═══════════════════════════════════════════════════════ -->
+
+<style>
+  :root {
+    --bg: #0A0810;          /* 墨黑夜空,微偏紫 */
+    --panel: #131019;
+    --line: #292139;
+    --line-strong: #40335A;
+    --ink: #F4EFF6;
+    --muted: #A79BB8;
+    --dim: #8B80A0;
+    --pink: #F03FA0;        /* 取自 New Moon logo 的玫红辉光 */
+    --pink-dim: #C42E82;
+    --glow: 0 0 20px rgba(240, 63, 160, 0.45);
+    --sans: "PingFang SC", "HarmonyOS Sans SC", "MiSans", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+    --mono: ui-monospace, "SF Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15.5px;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+  p { margin: 0 0 14px; }
+  a { color: var(--pink); }
+
+  /* ── 章节眉:电路节点 + 等宽字标签 + 走线 ── */
+  section { padding-top: 84px; }
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    color: var(--pink);
+    margin: 0 0 18px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 7px; height: 7px;
+    background: var(--pink);
+    border-radius: 50%;
+    box-shadow: var(--glow);
+    flex: none;
+  }
+  .eyebrow::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--line-strong), transparent);
+  }
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    margin: 0 0 18px;
+    text-wrap: balance;
+  }
+
+  /* ── 开屏 ── */
+  .hero {
+    padding-top: 64px;
+    padding-bottom: 72px;
+    background:
+      linear-gradient(180deg, rgba(10, 8, 16, 0) 55%, #0A0810 94%),
+      radial-gradient(ellipse 75% 40% at 50% 8%, rgba(240, 63, 160, 0.13), transparent 70%),
+      radial-gradient(rgba(240, 63, 160, 0.05) 1.6px, transparent 2px),
+      radial-gradient(rgba(244, 239, 246, 0.05) 1px, transparent 1.4px);
+    background-size: auto, auto, 34px 34px, 16px 16px;
+  }
+  /* 月相框:盈月光影——外辉光偏左上受光侧,内阴影把满月压成月牙 */
+  .moon {
+    position: relative;
+    width: 216px; height: 216px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgba(240, 63, 160, 0.55);
+    box-shadow: -10px -8px 36px rgba(240, 63, 160, 0.36), 0 0 90px rgba(240, 63, 160, 0.15);
+    margin: 0 0 30px;
+  }
+  /* 换照片后取景不对时,只调下面的 object-position 第二个值(越小越靠头顶) */
+  .moon img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: 50% 15%;
+    display: block;
+  }
+  .moon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    box-shadow: inset -32px -20px 54px rgba(10, 8, 16, 0.58);
+    pointer-events: none;
+  }
+  h1 {
+    font-family: var(--mono);
+    font-size: clamp(34px, 10vw, 54px);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.12;
+    margin: 0 0 12px;
+  }
+  .subname {
+    font-family: var(--mono);
+    font-size: 15px;
+    letter-spacing: 0.45em;
+    color: var(--pink);
+    text-shadow: var(--glow);
+    margin: 0 0 22px;
+  }
+  .identity { color: var(--muted); font-size: 14.5px; margin: 0 0 34px; }
+  .identity b { color: var(--ink); font-weight: 600; }
+  .thesis {
+    font-size: clamp(26px, 7vw, 34px);
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: 0.03em;
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  .thesis em { font-style: normal; color: var(--pink); text-shadow: var(--glow); }
+  .thesis-sub { color: var(--muted); margin: 0 0 34px; }
+  .btn {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #14060E;
+    background: var(--pink);
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 3px;
+    box-shadow: var(--glow);
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn:focus-visible, a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+  /* ── 数据带 ── */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .stat {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 20px 18px 14px;
+  }
+  .stat .num {
+    font-family: var(--mono);
+    font-size: clamp(26px, 7vw, 34px);
+    font-weight: 700;
+    color: var(--pink);
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  .stat .num small { font-size: 0.55em; letter-spacing: 0.1em; }
+  .stat .num--txt { font-size: clamp(17px, 5vw, 24px); line-height: 1.7; }
+  .stat .lbl { font-size: 12.5px; color: var(--muted); margin-top: 6px; line-height: 1.6; }
+
+  /* ── 履历时间线 ── */
+  .lede { color: var(--muted); max-width: 34em; }
+  .lede b { color: var(--ink); font-weight: 600; }
+  .tl { margin: 30px 0 0; padding: 4px 0 4px 26px; border-left: 1px solid var(--line-strong); }
+  .stop { position: relative; padding-bottom: 30px; }
+  .stop:last-child { padding-bottom: 6px; }
+  .stop::before {
+    content: "";
+    position: absolute;
+    left: -31px; top: 9px;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1.5px solid var(--pink-dim);
+  }
+  .stop.now::before { background: var(--pink); border-color: var(--pink); box-shadow: var(--glow); }
+  .stop .where {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--dim);
+    margin-bottom: 2px;
+  }
+  .stop.now .where { color: var(--pink); }
+  .stop h3 { font-size: 17.5px; font-weight: 700; margin: 0 0 4px; }
+  .stop p { font-size: 14px; color: var(--muted); margin: 0; max-width: 36em; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+  .chip {
+    font-size: 12.5px;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    background: var(--panel);
+    border-radius: 2px;
+    padding: 4px 12px;
+  }
+  .chip::before {
+    content: "//";
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--pink-dim);
+    margin-right: 8px;
+  }
+
+  /* ── 轻咨询 ── */
+  .topics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+    margin: 26px 0 30px;
+  }
+  .topic {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 13px 16px;
+    font-size: 14.5px;
+  }
+  .topic i {
+    font-family: var(--mono);
+    font-style: normal;
+    font-size: 12px;
+    color: var(--pink);
+    flex: none;
+  }
+  .rules {
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+    background: linear-gradient(180deg, rgba(240, 63, 160, 0.07), transparent 55%), var(--panel);
+    padding: 22px 22px 10px;
+  }
+  .rules .rt {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    color: var(--pink);
+    margin: 0 0 14px;
+  }
+  .rule { display: flex; gap: 14px; align-items: baseline; margin-bottom: 12px; }
+  .rule i { font-family: var(--mono); font-style: normal; font-size: 12px; color: var(--dim); flex: none; }
+  .rule em { font-style: normal; color: var(--pink); font-weight: 600; }
+
+  /* ── 咨询手记 ── */
+  .note-meta-line { font-size: 13px; color: var(--dim); font-family: var(--mono); letter-spacing: 0.06em; margin: -6px 0 22px; }
+  .cases { display: flex; flex-direction: column; gap: 14px; }
+  .case {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 20px 22px;
+  }
+  .case .meta {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: var(--pink);
+    margin-bottom: 8px;
+  }
+  .case h3 { font-size: 17px; font-weight: 700; margin: 0 0 10px; }
+  .case .field { font-size: 12.5px; color: var(--dim); letter-spacing: 0.06em; margin: 10px 0 2px; }
+  .case .field + p { font-size: 14.5px; color: var(--ink); margin: 0; }
+  /* 占位卡:案例还没写时的样子,填入真实内容后换成完整卡片(去掉 pending/row 类和幽灵条) */
+  .case.pending { border-style: dashed; border-color: var(--line-strong); }
+  .case.pending .meta { color: var(--dim); }
+  .case.pending h3 { color: var(--dim); font-weight: 600; }
+  .case.row { display: flex; align-items: baseline; gap: 16px; padding: 13px 22px; }
+  .case.row .meta { margin: 0; flex: none; }
+  .case.row h3 { margin: 0; font-size: 14px; }
+  .ghost { height: 10px; border-radius: 2px; background: linear-gradient(90deg, var(--line), transparent); margin: 12px 0; }
+  .ghost.g2 { width: 82%; }
+  .ghost.g3 { width: 58%; margin-bottom: 4px; }
+
+  /* ── 联系 ── */
+  .contact-box {
+    border: 1px dashed var(--line-strong);
+    border-radius: 3px;
+    padding: 18px 20px;
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    margin: 24px 0 14px;
+  }
+  .contact-box b { color: var(--pink); font-weight: 700; }
+
+  /* ── 页脚 ── */
+  footer { padding: 90px 0 56px; text-align: center; }
+  footer .brand { width: 190px; height: auto; mix-blend-mode: screen; display: block; margin: 0 auto 6px; }
+  footer .fine {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.18em;
+    color: var(--dim);
+    line-height: 2.2;
+  }
+
+  /* ── 动效:只做开屏一组,尊重系统减动效设置 ── */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero .moon, .hero h1, .hero .subname, .hero .identity, .hero .thesis, .hero .thesis-sub, .hero .btn {
+      animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+    }
+    .hero h1 { animation-delay: 0.08s; }
+    .hero .subname { animation-delay: 0.16s; }
+    .hero .identity { animation-delay: 0.22s; }
+    .hero .thesis { animation-delay: 0.3s; }
+    .hero .thesis-sub { animation-delay: 0.36s; }
+    .hero .btn { animation-delay: 0.44s; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: none; }
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="moon"><img src="assets/photo.jpg" alt="毛小娟" width="1066" height="1600"></div>
+    <h1>JOYCE MAO</h1>
+    <p class="subname">毛小娟 · 月牙小姐</p>
+    <p class="identity"><b>前线性资本副总裁</b> · OPC 一人公司实践者 · 青年创业导师</p>
+    <p class="thesis">不聊空话，<br>把一个<em>真问题</em>，聊透。</p>
+    <p class="thesis-sub">给年轻创业者的 1 对 1 轻咨询，就聊你眼前正在经历的事。</p>
+    <a class="btn" href="#contact">约一次轻咨询</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">01 · DATA</p>
+    <h2>先用几个数字认识她</h2>
+    <div class="stats">
+      <div class="stat">
+        <div class="num">20<small> 年</small></div>
+        <div class="lbl">在投资与产业一线工作的年头</div>
+      </div>
+      <div class="stat">
+        <div class="num">$20<small> 亿</small></div>
+        <div class="lbl">她曾任副总裁的基金「线性资本」的规模（美元）</div>
+      </div>
+      <div class="stat">
+        <div class="num num--txt">高瓴·红杉</div>
+        <div class="lbl">线性资本身后的股东阵容</div>
+      </div>
+      <div class="stat">
+        <div class="num">03<small> 期</small></div>
+        <div class="lbl">轻咨询已进行的期数，本页持续更新</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">02 · PATH</p>
+    <h2>从看项目，到自己做</h2>
+    <p class="lede">二十年，在投资与产业一线看项目、连接产业；现在亲自跑一人公司。<b>正因为两边都走过，更清楚年轻创业者起步时，常卡在方向、产品和取舍上。</b></p>
+
+    <div class="tl">
+      <div class="stop">
+        <div class="where">BEIJING</div>
+        <h3>上市公司 · 十余年</h3>
+        <p>投资人关系、商业化构建、市场营销、跨界战略合作</p>
+      </div>
+      <div class="stop">
+        <div class="where">SHANGHAI</div>
+        <h3>线性资本 · 副总裁</h3>
+        <p>一线科技基金。负责产业生态建设与运营，为被投企业对接大客户（大健康 / AI / 零售 / 工业），主导与行业、政府的战略合作</p>
+      </div>
+      <div class="stop now">
+        <div class="where">SHUNDE · NOW</div>
+        <h3>OPC 一人公司 · 月牙同辉</h3>
+        <p>亲自实践一人公司，创立月牙同辉（New Moon）；写公众号「月牙小姐」，顺德美食与数字游民博主</p>
+      </div>
+    </div>
+
+    <div class="chips">
+      <span class="chip">佛山市 &amp; 顺德区招商顾问</span>
+      <span class="chip">00 后创业社区 wteam 评审顾问</span>
+      <span class="chip">广东省工业设计协会 × 央视主办 · 国际设计大赛评审顾问</span>
+      <span class="chip">青年创业导师</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">03 · CONSULTING</p>
+    <h2>给年轻创业者的 1 对 1 轻咨询</h2>
+    <p class="lede">一次 1 对 1，只聊一件事：你眼前正在经历的那个问题。帮你把它理清楚一点，少走一点弯路。</p>
+
+    <div class="topics">
+      <div class="topic"><i>01</i>创业或副业，方向怎么选</div>
+      <div class="topic"><i>02</i>手里的技能，怎么做成产品</div>
+      <div class="topic"><i>03</i>产品做出来了，用户从哪来</div>
+      <div class="topic"><i>04</i>内容怎么做，才能持续积累</div>
+      <div class="topic"><i>05</i>一人公司，第一步怎么走</div>
+      <div class="topic"><i>06</i>时间、成本和资源，怎么取舍</div>
+    </div>
+
+    <div class="rules">
+      <p class="rt">只有三条规则</p>
+      <div class="rule"><i>01</i><span>不用准备漂亮的 BP，也不用包装自己</span></div>
+      <div class="rule"><i>02</i><span>带一个正在发生的真问题来</span></div>
+      <div class="rule"><i>03</i><span>聊完若觉得有收获，<em>两杯咖啡钱，随喜就好</em></span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">04 · NOTES</p>
+    <h2>咨询手记</h2>
+    <p class="note-meta-line">持续更新 · 最新在前 · 案例均已匿名</p>
+
+    <div class="cases">
+
+      <!-- ═══════ 案例卡片模板:新增案例时复制下面注释里的整段,
+           贴到这行注释之后(最新在前),填入内容,数据带里的期数同步 +1。
+           把某张占位卡(含单行的 VOL.01/02)换成真实案例时,也是整卡替换成这个结构 ═══════
+      <article class="case">
+        <div class="meta">VOL.04 / 20XX.XX</div>
+        <h3>对方是谁(匿名) · 这次聊的主题</h3>
+        <div class="field">来的问题</div>
+        <p>……</p>
+        <div class="field">聊了什么</div>
+        <p>……</p>
+        <div class="field">之后</div>
+        <p>……</p>
+      </article>
+      ═══════════════════════════════════════════════════════ -->
+
+      <article class="case pending">
+        <div class="meta">VOL.03</div>
+        <h3>记录整理中，即将更新</h3>
+        <div class="ghost"></div>
+        <div class="ghost g2"></div>
+        <div class="ghost g3"></div>
+      </article>
+
+      <article class="case pending row">
+        <div class="meta">VOL.02</div>
+        <h3>记录整理中</h3>
+      </article>
+
+      <article class="case pending row">
+        <div class="meta">VOL.01</div>
+        <h3>记录整理中</h3>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow">05 · CONTACT</p>
+    <h2>想聊聊？</h2>
+    <p class="lede">带上一个正在发生的真问题，来约一次轻咨询。</p>
+
+    <!-- CONTACT-PLACEHOLDER:联系方式确定后,替换下面整块 -->
+    <div class="contact-box">CONTACT / <b>联系方式即将补上</b></div>
+
+    <p class="lede" style="font-size: 14px;">也可以先到公众号 <b>「月牙小姐」</b> 认识我。</p>
+  </div>
+</section>
+
+<footer>
+  <img class="brand" src="assets/logo.jpg" alt="New Moon · independent moon" width="680" height="730">
+  <p class="fine">NEW MOON · INDEPENDENT MOON<br>© 2026 毛小娟 · 最近更新 2026.08</p>
+</footer>
+
+</body>
+</html>
