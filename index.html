@@ -298,32 +298,22 @@
   .ghost.g3 { width: 58%; margin-bottom: 4px; }
 
   /* ── 联系 ── */
-  .contact-box {
-    border: 1px dashed var(--line-strong);
-    border-radius: 3px;
-    padding: 18px 20px;
-    font-family: var(--mono);
-    font-size: 14px;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-    margin: 24px 0 14px;
+  .wechat-qr {
+    display: block;
+    width: min(100%, 270px);
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+    margin: 24px 0 34px;
   }
-  .contact-box b { color: var(--pink); font-weight: 700; }
-  .mp-row { display: flex; align-items: center; gap: 18px; margin-top: 24px; }
-  .qr { width: 128px; height: 128px; flex: none; border-radius: 3px; }
-  .qr-pending {
-    border: 1px dashed var(--line-strong);
-    color: var(--dim);
-    font-family: var(--mono);
-    font-size: 11.5px;
-    letter-spacing: 0.1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: 1.9;
+  .card-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+    margin: 10px 0 0;
   }
-  img.qr { background: #FFFFFF; border: 1px solid var(--line); padding: 7px; }
 
   /* ── 页脚 ── */
   footer { padding: 90px 0 56px; text-align: center; }
@@ -529,18 +519,14 @@
   <div class="wrap">
     <p class="eyebrow">05 · CONTACT</p>
     <h2>想聊聊？</h2>
-    <p class="lede">带上一个正在发生的真问题，来约一次轻咨询。</p>
+    <p class="lede">带上一个正在发生的真问题，扫码加我微信，约一次轻咨询。</p>
 
-    <!-- CONTACT-PLACEHOLDER:联系方式确定后,替换下面整块 -->
-    <div class="contact-box">CONTACT / <b>联系方式即将补上</b></div>
+    <!-- 个人微信二维码:更换时替换 assets/weichat-personal.jpg -->
+    <img class="wechat-qr" src="assets/weichat-personal.jpg" alt="毛小娟的个人微信二维码" width="888" height="1131">
 
-    <!-- 公众号二维码接口:拿到二维码图片后存为 assets/qrcode.jpg,
-         把下面的占位 div 换成:
-         <img class="qr" src="assets/qrcode.jpg" alt="公众号「月牙小姐」二维码" width="128" height="128"> -->
-    <div class="mp-row">
-      <div class="qr qr-pending">公众号二维码<br>待补</div>
-      <p class="lede" style="font-size: 14px; margin: 0;">也可以先到公众号<br><b>「月牙小姐」</b> 认识我。</p>
-    </div>
+    <!-- 名片(中文版,含公众号二维码):更换时替换 assets/card.jpg -->
+    <p class="lede" style="font-size: 14px; margin-bottom: 0;">这是我的名片，公众号二维码就在上面。</p>
+    <img class="card-img" src="assets/card.jpg" alt="月牙同辉 New Moon Capital 名片，含公众号二维码" width="1663" height="639">
   </div>
 </section>
 
