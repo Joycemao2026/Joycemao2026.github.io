@@ -283,6 +283,8 @@
     color: var(--pink);
     margin-bottom: 8px;
   }
+  .case .meta .tags { color: var(--dim); letter-spacing: 0.08em; margin-left: 10px; }
+  .case .desc { margin: 0; font-size: 14.5px; }
   .case h3 { font-size: 17px; font-weight: 700; margin: 0 0 10px; }
   .case .field { font-size: 12.5px; color: var(--dim); letter-spacing: 0.06em; margin: 10px 0 2px; }
   .case .field + p { font-size: 14.5px; color: var(--ink); margin: 0; }
@@ -502,16 +504,11 @@
 
       <!-- ═══════ 案例卡片模板:新增案例时复制下面注释里的整段,
            贴到这行注释之后(最新在前),填入内容,数据带里的期数同步 +1。
-           把某张占位卡(含单行的 VOL.01/02)换成真实案例时,也是整卡替换成这个结构 ═══════
+           .tags 里放对方的匿名身份标签(#背景 #领域),不写真名 ═══════
       <article class="case">
-        <div class="meta">VOL.04 / 20XX.XX</div>
-        <h3>对方是谁(匿名) · 这次聊的主题</h3>
-        <div class="field">来的问题</div>
-        <p>……</p>
-        <div class="field">聊了什么</div>
-        <p>……</p>
-        <div class="field">之后</div>
-        <p>……</p>
+        <div class="meta">VOL.04 <span class="tags">#对方的背景 #领域</span></div>
+        <h3>这次聊的主题(一句话)</h3>
+        <p class="desc">项目或问题的描述,两三行以内。</p>
       </article>
       ═══════════════════════════════════════════════════════ -->
 
@@ -523,14 +520,16 @@
         <div class="ghost g3"></div>
       </article>
 
-      <article class="case pending row">
-        <div class="meta">VOL.02</div>
-        <h3>记录整理中</h3>
+      <article class="case">
+        <div class="meta">VOL.02 <span class="tags">#腾讯游戏开发</span></div>
+        <h3>随手一发，就进知识库</h3>
+        <p class="desc">从微信发出文字、语音、视频，自动存进个人知识库——解决「随时随地、随手记录」这件事。</p>
       </article>
 
-      <article class="case pending row">
-        <div class="meta">VOL.01</div>
-        <h3>记录整理中</h3>
+      <article class="case">
+        <div class="meta">VOL.01 <span class="tags">#中山大学 #计算机系 #AI赋能教培</span></div>
+        <h3>把家教的生产全流程，交给 AI</h3>
+        <p class="desc">用 AI 自动化家教相关的生产：简历制作、学生能力圈档案、课程讲义资料、给家长的课后反馈，覆盖全流程链路。</p>
       </article>
 
     </div>
