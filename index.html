@@ -297,14 +297,36 @@
   .ghost.g2 { width: 82%; }
   .ghost.g3 { width: 58%; margin-bottom: 4px; }
 
-  /* ── 联系 ── */
-  .wechat-qr {
+  /* ── 联系:扫码取景框 ── */
+  .scan {
+    position: relative;
+    display: inline-block;
+    padding: 12px;
+    margin: 26px 0 0;
+  }
+  .scan img {
     display: block;
-    width: min(100%, 270px);
+    width: 178px;
     height: auto;
-    border-radius: 6px;
-    border: 1px solid var(--line);
-    margin: 24px 0 34px;
+    background: #FFFFFF;
+    border-radius: 4px;
+  }
+  .scan::before, .scan::after, .scan .c::before, .scan .c::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+  }
+  .scan::before { top: 0; left: 0; border-top: 2px solid var(--pink); border-left: 2px solid var(--pink); }
+  .scan::after { bottom: 0; right: 0; border-bottom: 2px solid var(--pink); border-right: 2px solid var(--pink); }
+  .scan .c::before { top: 0; right: 0; border-top: 2px solid var(--pink); border-right: 2px solid var(--pink); }
+  .scan .c::after { bottom: 0; left: 0; border-bottom: 2px solid var(--pink); border-left: 2px solid var(--pink); }
+  .scan-cap {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: var(--pink);
+    margin: 8px 0 36px;
   }
   .card-img {
     display: block;
@@ -521,12 +543,13 @@
     <h2>想聊聊？</h2>
     <p class="lede">带上一个正在发生的真问题，扫码加我微信，约一次轻咨询。</p>
 
-    <!-- 个人微信二维码:更换时替换 assets/weichat-personal.jpg -->
-    <img class="wechat-qr" src="assets/weichat-personal.jpg" alt="毛小娟的个人微信二维码" width="888" height="1131">
+    <!-- 个人微信二维码:更换时替换 assets/wechat-qr.jpg(只裁码体,保留窄白边) -->
+    <div class="scan"><i class="c" aria-hidden="true"></i><img src="assets/wechat-qr.jpg" alt="毛小娟的个人微信二维码" width="652" height="674"></div>
+    <p class="scan-cap">WECHAT · 扫码加我微信</p>
 
-    <!-- 名片(中文版,含公众号二维码):更换时替换 assets/card.jpg -->
+    <!-- 名片(信息面,含公众号二维码):更换时替换 assets/card.jpg -->
     <p class="lede" style="font-size: 14px; margin-bottom: 0;">这是我的名片，公众号二维码就在上面。</p>
-    <img class="card-img" src="assets/card.jpg" alt="月牙同辉 New Moon Capital 名片，含公众号二维码" width="1663" height="639">
+    <img class="card-img" src="assets/card.jpg" alt="月牙同辉 New Moon Capital 名片，含公众号二维码" width="973" height="639">
   </div>
 </section>
 

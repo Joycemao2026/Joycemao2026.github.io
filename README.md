@@ -18,7 +18,7 @@
 替换 `assets/photo.jpg`(竖版人像)。圆框里取景位置不对时,搜索 `object-position`,微调第二个百分比:数值越小,画面越靠头顶。
 
 ### 换联系方式
-个人微信二维码 = 替换 `assets/weichat-personal.jpg`;名片 = 替换 `assets/card.jpg`(横版,公众号二维码在名片上)。文件名不变的话,页面代码不用动。
+个人微信二维码 = 替换 `assets/wechat-qr.jpg`(只裁二维码本体,四周保留一圈窄白边,别带头像和文字);名片 = 替换 `assets/card.jpg`(信息面,公众号二维码在名片上)。文件名不变的话,页面代码不用动。
 
 ## 怎么部署(发布成公开链接)
 
@@ -43,6 +43,6 @@
 index.html                     页面本体(内容 + 样式都在这一个文件里)
 assets/photo.jpg               人像照片(网页用,已压缩)
 assets/logo.jpg                New Moon 月牙 logo
-assets/weichat-personal.jpg    个人微信二维码
-assets/card.jpg                名片(中文版,含公众号二维码)
+assets/wechat-qr.jpg           个人微信二维码(纯码体)
+assets/card.jpg                名片信息面(含公众号二维码)
 ```
