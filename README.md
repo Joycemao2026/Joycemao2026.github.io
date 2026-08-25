@@ -45,4 +45,5 @@ assets/photo.jpg               人像照片(网页用,已压缩)
 assets/logo.jpg                New Moon 月牙 logo
 assets/wechat-qr.jpg           个人微信二维码(纯码体)
 assets/card.jpg                名片信息面(含公众号二维码)
+assets/favicon.png             浏览器标签图标(logo 圆形裁切)
 ```
